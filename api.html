@@ -1,0 +1,52 @@
+<HTML>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>AJAX REQUEST</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript">
+
+            $(function() {
+
+                var URL = 'https://iip280h6aj.execute-api.ap-northeast-1.amazonaws.com/test_stage';
+
+                $("#submit").click(function() {
+                    $("#submit").attr("disabled", "disabled");
+
+                    $.ajax({
+                        type: "GET",
+                        url: URL, 
+                        dataType: "json",
+                        error: function() {
+                            alert('ERROR');
+                            $("#submit").removeAttr("disabled");
+                        },
+                        success: function(res) {
+                            alert(JSON.stringify(res));
+                            $("#submit").removeAttr("disabled");
+                        }
+                    });
+                });
+
+            });
+
+        </script>
+
+    </head>
+
+    <body>
+    <div>
+        <h1>AJAX REQUEST</h1>
+        <div>
+            API Gatewayの該当エンドポイントにAjaxリクエスト（GET）を投げます。
+        </div>
+        <table border=0>
+            <tr>
+                <td></td>
+                <td><button id='submit'>実行</button></td>
+            </tr>
+        </table>
+    </div>
+
+    </body>
+</HTML>
