@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <img id="mypic" onclick="slideshow()" src="pics/1.jpg" width="400" height="300">
+            <script>
+            var pics_src = new Array("content/img1.jpg","content/img2.jpg","content/img3.jpg");
+            var num = 0;
+ 
+            function slideshow(){
+                if (num == 2) {
+                    num = 0;
+                }
+                else {
+                    num ++;
+                }
+                document.getElementById("mypic").src=pics_src[num];
+            }
+            </script>
+    </body>
+</html>
