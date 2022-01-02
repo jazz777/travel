@@ -3,15 +3,25 @@
         <title>MyMemo</title>
         <style type="text/css">
             textarea{width:100%;height:30%;}
+            div{width: 10px;}
+            video{    position: relative;
+                      width: 100vw;
+                      height: 50vh;
+                      overflow: hidden;
+                 }
+
         </style>
     </head>
     <body>
-        <div class="video-wrap">
-            <p>Brilliant Blue</p>
+
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/Dx5qFachd3A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="640" height="360" src="images/211001_121528.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="movie">
             <video src="images/211001_121528.mp4" autoplay loop muted>
-              <img src="images/jewellery.jpg" alt="Placeholder">
+
             </video>
-        </div>
+            </div>
+
         <h1>My Favorites</h1>
         <form name="form1">
             <textarea name="Memo"></textarea>
